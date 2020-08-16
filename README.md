@@ -23,7 +23,7 @@
 [**9.** **SQL Programming**](#sql-programming)
 
 ---
-## **Statement of Requirements**
+## **1. Statement of Requirements**
 
 The purpose of this project is to design, model and program a database
 which resembles one of the many real-life scenarios for which a database
@@ -76,25 +76,25 @@ library's inventory. The reservations will have a date and a status
 indicating whether the reservation is still in progress, is completed or
 has been cancelled.
 
-## **Conceptual Design**
 ---
+## **2. Conceptual Design**
 
 After the statement of requirements has been set into place, we now
 understand what are the main concepts that our database will be working
 with. These concepts have been text-bolded in the previous section.
 
-![](.//media/image2.jpeg){width="6.493055555555555in"
-height="7.6090277777777775in"}From there, in order to get a better
-conceptual understanding of our database and model it properly, we will
-draw a relevant Entity-Relationship diagram (aka. E-R diagram), which
-must capture the necessary requirements. Within this diagram, which can
-be seen below, all the concepts are linked together in some form, and
-later, these considerations will be the start of the modeling of our
-database tables.
+From there, in order to get a better conceptual understanding of our 
+database and model it properly, we will draw a relevant Entity-Relationship 
+diagram (aka. E-R diagram), which must capture the necessary requirements. 
+Within this diagram, which can be seen below, all the concepts are 
+linked together in some form, and later, these considerations will be the 
+start of the modeling of our database tables.
+
+![](.//media/image2.jpeg)
 
 Let us now explain the choices made in modeling our case-study database:
 
-1.  **Entity Sets (including attributes and primary key choices)**
+**I. Entity Sets (including attributes and primary key choices)**
 
 -   The library user becomes an entity named **LibraryUser**. Initially,
     this name was set to user, but was modified due to a reserved
@@ -160,8 +160,7 @@ Let us now explain the choices made in modeling our case-study database:
     entity sets, and that this database model does not contain any weak
     entity sets.
 
-2.  **Relationship Sets (including cardinality, participation,
-    attributes and PK choices)**
+**II. Relationship Sets (including cardinality, participation, attributes and PK choices)**
 
 -   When a LibraryUser wants to borrow a Book, one **Loans** a Book,
     indicating a binary relationship between LibraryUser and Book. Not
@@ -250,8 +249,8 @@ Let us now explain the choices made in modeling our case-study database:
     instead, the primary key of Genre will become a foreign key
     attribute in the Book table.
 
-**Logical Design**
-==================
+---
+## **3. Logical Design**
 
 Once the Entity-Relationship Diagram has been fully structured and
 understood, we will convert the E-R diagram to a set of Relation
@@ -260,7 +259,7 @@ implementation later. These relation schemas will be converted into a
 visual representation using a Database Schema Diagram, shown in the
 figure at the end of this report.
 
-Following the method described in the Database System Concepts, 6^th^
+Following the method described in the Database System Concepts, 6th 
 Edition, as well as in our course supervisor's slides, we will map the
 E-R diagram into the following relation schemas:
 
@@ -295,12 +294,13 @@ E-R diagram into the following relation schemas:
     BookID) **references** (Author(AuthorID), Book(BookID)) **on delete
     cascade**
 
-![](.//media/image3.jpeg){width="5.113775153105862in" height="5.27in"}We
-have decided to make a separate Primary Key for each table coming from
+We have decided to make a separate Primary Key for each table coming from
 an Entity, in order to successfully identify every row without relying
 on the data in the row. For many-to-many relationship tables, the
 primary keys are composite primary keys, consisting of the Foreign Keys,
 as well as some date attributes, as in the case of Loans and Reserves.
+
+![](.//media/image3.jpeg)
 
 On every foreign key, the DELETE cascades, since all our Foreign Keys
 reference only unique ID identifiers, and there is no further need to
@@ -310,8 +310,8 @@ the database, the referenced books are deleted as well, and so on. The
 Foreign Key relations between tables can be seen from the arrows in the
 database schema diagram, shown in the figure above.
 
-**Normalization**
-=================
+---
+## **4. Normalization**
 
 Lastly before we delve into the implementation of the database into SQL,
 we will first check for functional dependencies and normalization
@@ -402,8 +402,8 @@ there cannot exist any multivalued dependency in a table with less than
 three attributes. Therefore, we can conclude that the Writes table is in
 the fourth normal form.
 
-**Implementation**
-==================
+---
+## **5. Implementation**
 
 After the database has been logically and conceptually designed, and
 also checked for normalization issues, it is now time to create it, with
@@ -431,19 +431,32 @@ seen in the two tables below. The full list of SQL statement used to
 create the database can be viewed in the SQL script attached to this
 report.
 
-  Entity Table implementation                                                 Relationship Table implementation
-  --------------------------------------------------------------------------- --------------------------------------------------------------------------------------
-  ![](.//media/image4.png){width="3.9375in" height="1.7020833333333334in"}a   ![](.//media/image5.png){width="3.886111111111111in" height="1.9527777777777777in"}
-  ![](.//media/image6.png){width="3.53125in" height="1.4243055555555555in"}   ![](.//media/image7.png){width="3.8958333333333335in" height="1.6291666666666667in"}
-  ![](.//media/image8.png){width="4.145833333333333in" height="2.28125in"}    ![](.//media/image9.png){width="3.8854166666666665in" height="1.3291666666666666in"}
+#### I. Examples of Entity table implementation:
 
-  View implementation
-  --------------------------------------------------------------------------------------
-  ![](.//media/image10.png){width="6.893055555555556in" height="1.1354166666666667in"}
-  ![](.//media/image11.png){width="6.677083333333333in" height="1.1715277777777777in"}
+![](.//media/image4.png)
+  
+![](.//media/image6.png)
+  
+![](.//media/image8.png)
+  
+---
+#### II. Examples of Relationship table implementation:
 
-**Database Instance**
-=====================
+![](.//media/image5.png)
+
+![](.//media/image7.png)
+
+![](.//media/image9.png)
+
+---
+#### III. Examples of View table implementation:
+
+![](.//media/image10.png)
+
+![](.//media/image11.png)
+
+---
+## **6. Database Instance**
 
 With this report chapter, we will take the empty tables and views from
 above, and populate them with appropriate data using the SQL command
