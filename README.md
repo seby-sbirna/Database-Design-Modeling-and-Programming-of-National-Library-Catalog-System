@@ -94,7 +94,7 @@ start of the modeling of our database tables.
 
 Let us now explain the choices made in modeling our case-study database:
 
-**I. Entity Sets (including attributes and primary key choices)**
+**1. Entity Sets (including attributes and primary key choices)**
 
 -   The library user becomes an entity named **LibraryUser**. Initially,
     this name was set to user, but was modified due to a reserved
@@ -160,7 +160,7 @@ Let us now explain the choices made in modeling our case-study database:
     entity sets, and that this database model does not contain any weak
     entity sets.
 
-**II. Relationship Sets (including cardinality, participation, attributes and PK choices)**
+**2. Relationship Sets (including cardinality, participation, attributes and PK choices)**
 
 -   When a LibraryUser wants to borrow a Book, one **Loans** a Book,
     indicating a binary relationship between LibraryUser and Book. Not
@@ -304,8 +304,6 @@ as well as some date attributes, as in the case of Loans and Reserves.
   <img src=".//media/image3.jpeg"/>
 </p>
 
-![](.//media/image3.jpeg)
-
 On every foreign key, the DELETE cascades, since all our Foreign Keys
 reference only unique ID identifiers, and there is no further need to
 keep referenced data for the deleted tuple. For instance, if a user is
@@ -417,11 +415,11 @@ diagrams.
 When creating the tables, we paid special attention to the type of each
 individual attribute, so that it would suit the kind of data that one
 would input in a real-life Library database. As such, most of our
-attributes will be VARCHAR(255), since they are related to text fields
+attributes will be `VARCHAR(255)`, since they are related to text fields
 of long book titles, author names or genre types, and many others. A
 modeling decision has been made that all ID attributes (one for each
 relation, helping identifying tuples within a relation) will be made
-INTEGER, in order to use the AUTO_INCREMENT property of INTEGER
+`INTEGER`, in order to use the `AUTO_INCREMENT` property of `INTEGER`
 attributes. This allows for safe progression of the unique internal ID
 identifier of a new set of data within a relation, and it seemed
 reasonable to use for our purpose. Still, this choice is mentioned,
@@ -435,7 +433,7 @@ seen in the two tables below. The full list of SQL statement used to
 create the database can be viewed in the SQL script attached to this
 report.
 
-#### I. Examples of Entity table implementation:
+### 1. Examples of Entity table implementation:
 
 ![](.//media/image4.png)
   
@@ -444,7 +442,7 @@ report.
 ![](.//media/image8.png)
   
 ---
-#### II. Examples of Relationship table implementation:
+### 2. Examples of Relationship table implementation:
 
 ![](.//media/image5.png)
 
@@ -453,7 +451,7 @@ report.
 ![](.//media/image9.png)
 
 ---
-#### III. Examples of View table implementation:
+### 3. Examples of View table implementation:
 
 ![](.//media/image10.png)
 
@@ -476,8 +474,9 @@ authentic data which has extracted off library websites and online
 bookstores. We invite the reader to read the SQL script and understand
 the small story behind the users of the database.
 
-![](.//media/image12.png){width="8.03in" height="1.83in"}Here are some
-examples of how the data has been inserted using the INSERT statement:
+Here are some examples of how the data has been inserted using the INSERT statement:
+
+![](.//media/image12.png)
 
 The full list of data populating statements can be found in the attached
 scripts. Here, we will show the relation instance of all our Tables and
@@ -497,66 +496,75 @@ Views, which now have gone through the creation and population steps:
   ![](.//media/image34.png){width="1.6625in" height="0.16875in"}                           ![](.//media/image35.png){width="4.444444444444445in" height="1.238888888888889in"}
   ![](.//media/image36.png){width="1.8180555555555555in" height="0.17430555555555555in"}   ![](.//media/image37.png){width="1.4347222222222222in" height="0.3229166666666667in"}
 
-**SQL Data Queries**
-====================
+---
+## **7. SQL Data Queries**
 
 The database is now modeled, created and populated, which means that it
 is ready to use in the daily life of a librarian. Below, we present
 three SQL data queries that show typical tasks one can do with this
 database, along with their outputs:
 
-1.  **SQL Data Query 1**
+**1. SQL Data Query 1**
 
-![](.//media/image38.png){width="6.600694444444445in" height="1.3in"}The
-following query shows all books in the library and their respective
+The following query shows all books in the library and their respective
 authors:
 
-![](.//media/image39.png){width="6.52346019247594in" height="1.12in"}
+![](.//media/image38.png)
+
 Its output upon the initial database instance is:
 
-2.  **SQL Data Query 2**
+![](.//media/image39.png)
 
-![](.//media/image40.png){width="5.07in" height="1.24in"}The next query
-shows the number of unique books the library has from each author. This
+**2. SQL Data Query 2**
+
+The next query shows the number of unique books the library has from each author. This
 does not refer to the total number of copies of each book, but strictly
 to the number of different book titles present from each author. The
 authors are ordered descendingly according to the number of unique books
 present in the database:
 
-![](.//media/image41.png){width="4.42in" height="1.61in"}Its output upon
-the initial database instance is:
+![](.//media/image40.png)
 
-3.  []{#_Toc36730694 .anchor}**SQL Data Query 3**
+Its output upon the initial database instance is:
 
-![](.//media/image42.png){width="5.33in" height="1.46in"}This last query
-gives an overview of all loans for each library user, separated into
+![](.//media/image41.png)
+
+**3. SQL Data Query 3**
+
+This last query gives an overview of all loans for each library user, separated into
 categories by their status:
 
-![](.//media/image43.png){width="6.51in" height="1.25in"}Its output upon
-the initial database instance is:
+![](.//media/image42.png)
 
-**SQL Table Modifications**
-===========================
+Its output upon the initial database instance is:
+
+![](.//media/image43.png)
+
+---
+## **8. SQL Table Modifications**
 
 For the table modifications part, we will show some examples of SQL
 table commands: UPDATE and DELETE.
 
-1.  **UPDATE statement**
+**1. UPDATE statement**
 
-![](.//media/image44.png){width="5.74in" height="1.25in"}For this
-example, we will explain that the library decides to buy more copies of
+For this example, we will explain that the library decides to buy more copies of
 a book that is seeing particularly high demand among its users. This is
 the Book relation instance, before any update:
 
+![](.//media/image44.png)
+
 And this is the UPDATE statement:
 
-![](.//media/image46.png){width="6.509722222222222in"
-height="1.25in"}![](.//media/image47.png){width="4.24in"
-height="0.86in"}After the purchase, the number of copies (TotalQuantity)
+![](.//media/image47.png)
+
+After the purchase, the number of copies (TotalQuantity)
 of the fan-favorite book 'Database System Concepts, Sixth Edition' is
 simply updated from 5 to 10 in the Book table, as seen below:
 
-2.  **DELETE statement**
+![](.//media/image46.png)
+
+**2. DELETE statement**
 
 A reasonable example for our DELETE case scenario is that a user
 requests that their data be deleted from the library database. Because
@@ -565,67 +573,75 @@ have any unpaid fines. The user with LoanerNumber 154399 (Sule Altintas)
 is deleted from the table LibraryUser as long as no fines with
 PaymentStatus NOT PAID exist belonging to their LoanerNumber.
 
-![](.//media/image48.png){width="4.01in" height="1.43in"}The DELETE
-statement is:
+The DELETE statement is:
 
-![](.//media/image49.png){width="7.93in" height="1.79in"}The database
-relation instance data before the DELETE statement looks like this:
+![](.//media/image48.png)
 
-![](.//media/image53.png){width="7.93in" height="1.7in"}Because Sule has
-been good and not accumulated any fines, her data has now been deleted
+The database relation instance data before the DELETE statement looks like this:
+
+![](.//media/image49.png)
+
+Because Sule has been good and not accumulated any fines, her data has now been deleted
 from LibraryUser as well as any table where her UserID is a foreign key,
-as they are all set to CASCADE ON DELETE. These tables are Fine, Loans,
+as they are all set to `CASCADE ON DELETE`. These tables are Fine, Loans,
 and Reserves. Note that of these, only Loans has changed, as Sule did
 not have any entries in the other tables in the first place.
 
-![](.//media/image57.png){width="6.239583333333333in"
-height="0.2298611111111111in"}If we try instead to remove Billy Bully
-(who has LoanerNumber 203442) we see the following output, because Billy
-has been not paid three of his fines. Before his data is deleted, he
-must pay all the outstanding fines.
+![](.//media/image53.png)
 
-**SQL Programming**
-===================
+If we try instead to remove Billy Bully (who has LoanerNumber 203442) 
+we see the following output, because Billy has been not paid three of his fines. 
+Before his data is deleted, he must pay all the outstanding fines.
 
-In the last report part, regarding SQL programming, we will show
+![](.//media/image57.png)
+
+---
+## **9. SQL Programming**
+
+In this last part of the report, regarding SQL programming, we will show
 examples of the five types of programming structures that are required,
 and will explain, for each of them, how their behavior works.
 
-1.  **Function**
+**1. Functions**
 
-![](.//media/image58.png){width="6.55in"
-height="1.9694444444444446in"}Given a book ID, the function returns how
+Given a book ID, the function returns how
 many are currently loaned out. The LoanedQuantity variable defaults to
 0, so that NULL is not returned from the function.
 
-![](.//media/image59.png){width="6.55in"
-height="0.4895833333333333in"}The function used in a SELECT query to
+![](.//media/image58.png)
+
+The function used in a SELECT query to
 find the number of loans for each book:
 
-![](.//media/image60.png){width="6.55in"
-height="1.429861111111111in"}This statement gives out in the following
-result:
+![](.//media/image59.png)
 
-2.  **Procedure**
+This statement gives out in the following result:
 
-![](.//media/image61.png){width="6.589583333333334in"
-height="1.0895833333333333in"}Given a Book ID and a User ID, create a
+![](.//media/image60.png)
+
+**2. Procedures**
+
+Given a Book ID and a User ID, create a
 new loan for the user, with the book. Set the LoanedDate to the actual
 date of the loan, and the UntilDate to be 30 days later than the loan
 date. Set the initial status to 'LOANED'.
 
-![](.//media/image62.png){width="4.529861111111111in"
-height="0.7895833333333333in"}![](.//media/image63.png){width="6.589583333333334in"
-height="0.38958333333333334in"}Before the call to the procedure, the
+![](.//media/image61.png)
+
+Before the call to the procedure, the
 user with UserID 4 only has a single book borrowed, as it can be seen
 from the following execution:
 
-![](.//media/image64.png){width="3.07in"
-height="0.3in"}![](.//media/image65.png){width="6.59in"
-height="0.49in"}After the procedure call, the book 'Kafka på stranden',
+![](.//media/image62.png)
+![](.//media/image63.png)
+
+After the procedure call, the book 'Kafka på stranden',
 with BookID 1, has now been loaned by the user.
 
-3.  **Transaction**
+![](.//media/image64.png)
+![](.//media/image65.png)
+
+**3. Transactions**
 
 Create fines for every overdue loan that has a status of 'LOANED'. After
 the fines are created, set the status for the loans to 'FINED' to
@@ -637,70 +653,76 @@ the rollback. Furthermore, the transaction serves an important purpose,
 as we are ensured that an accidental database crash does not disrupt the
 fining procedure.
 
-![](.//media/image66.png){width="6.458333333333333in"
-height="2.5180555555555557in"}If the payment of the fines was modeled in
+If the payment of the fines was modeled in
 the database, a check of the paid amount could be implemented, and
 thereby a manual rollback added. However, the current design of the
 database does not require any transactions with a manual rollback.
 
-![](.//media/image67.png){width="6.458333333333333in"
-height="0.5222222222222223in"}Continuing with our previous example with
+![](.//media/image66.png)
+
+Continuing with our previous example with
 the loaning of books by UserID 4, we can see from the Procedure
 subsection that the book "Kafka på stranden" was loaned on the 2^nd^ of
 April, thus not requiring a fine at the moment of writing this report.
-In order to test the procedure with Transaction enabled, CreateFines(),
+In order to test the procedure with Transaction enabled, `CreateFines()`,
 we will change the loan date of the 'Kafka på stranden' book to go a few
 months back. After changing the dates for the loan, the table looks like
 this:
 
-![](.//media/image68.png){width="6.51in"
-height="0.49in"}![](.//media/image69.png){width="3.1034722222222224in"
-height="0.2125in"}In order to be sure that the user with UserID 4 has no
+![](.//media/image67.png)
+
+In order to be sure that the user with UserID 4 has no
 fines, let us run a SELECT query, and verify that the query returns an
 empty table result:
 
-![](.//media/image70.png){width="6.510416666666667in"
-height="0.5263888888888889in"}![](.//media/image71.png){width="1.4409722222222223in"
-height="0.25555555555555554in"}After calling the CreateFines() procedure
+![](.//media/image69.png)
+![](.//media/image68.png)
+
+After calling the `CreateFines()` procedure
 with transaction, the status of the loan is changed from LOANED to
 FINED, and a fine for UserID 4 is created:
 
-4.  **Trigger**
+![](.//media/image71.png)
+![](.//media/image70.png)
 
-![](.//media/image72.png){width="6.084027777777778in"
-height="3.0625in"}Here, we create a Trigger that, for each new insert in
+**4. Triggers**
+
+Here, we create a Trigger that, for each new insert in
 Loans, checks if there exist enough books for a new Loan, and also
 whether or not the user already has a copy of the book. If either
 constraint is broken, the '45000' signal is raised, and a custom message
 text is set.
 
-![](.//media/image73.png){width="6.439583333333333in"
-height="0.6298611111111111in"}![](.//media/image74.png){width="2.8402777777777777in"
-height="0.2798611111111111in"}If user with UserID 4 attempts to borrow
+![](.//media/image72.png)
+
+If user with UserID 4 attempts to borrow 
 the book with BookID 2 several times, the first call will succeed:
 
-![](.//media/image75.png){width="6.439583333333333in"
-height="0.2881944444444444in"}![](.//media/image76.png){width="2.84in"
-height="0.28in"}However, the second call does not, and the table will
-remain unchanged:
+![](.//media/image74.png)
+![](.//media/image73.png)
 
-![](.//media/image73.png){width="6.439583333333333in"
-height="0.6298611111111111in"}
+However, the second call does not, and the table will remain unchanged:
 
-![](.//media/image77.png){width="6.44in" height="0.25in"}Furthermore, if
-a user tries to borrow a book with no available copies, the following
-error occurs:
+![](.//media/image76.png)
+![](.//media/image75.png)
+![](.//media/image73.png)
 
-5.  **Event**
+Furthermore, if a user tries to borrow a book with no available copies, 
+the following error occurs:
 
-![](.//media/image78.png){width="2.4895833333333335in"
-height="0.6458333333333334in"}Here we create an Event that is scheduled
-to run every day, and utilizes the previously-created CreateFines()
+![](.//media/image77.png)
+
+**5. Events**
+
+Here we create an Event that is scheduled
+to run every day, and utilizes the previously-created `CreateFines()`
 Procedure in order to check loans, update the fine status for each loan,
-and create eventual necessary fines. The procedure CreateFines() is used
+and create eventual necessary fines. The procedure `CreateFines()` is used
 for modularity.
 
+![](.//media/image78.png)
+
 In order for the above event to be scheduled, we also need to run the
-command "**SET GLOBAL** event_scheduler = 1;" before running the
-previous event statement. By testing the CreateFines() procedure, the
+command `**SET GLOBAL** event_scheduler = 1;` before running the
+previous event statement. By testing the `CreateFines()` procedure, the
 event has effectively been tested as well.
