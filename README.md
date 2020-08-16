@@ -532,7 +532,8 @@ Its output upon the initial database instance is:
 
 ![](.//media/image41.png)
 
-**3. SQL Data Query 3**
+---
+### **3. SQL Data Query 3**
 
 This last query gives an overview of all loans for each library user, separated into
 categories by their status:
@@ -549,7 +550,8 @@ Its output upon the initial database instance is:
 For the table modifications part, we will show some examples of SQL
 table commands: UPDATE and DELETE.
 
-**1. UPDATE statement**
+---
+### **1. UPDATE statement**
 
 For this example, we will explain that the library decides to buy more copies of
 a book that is seeing particularly high demand among its users. This is
@@ -567,7 +569,8 @@ simply updated from 5 to 10 in the Book table, as seen below:
 
 ![](.//media/image46.png)
 
-**2. DELETE statement**
+---
+### **2. DELETE statement**
 
 A reasonable example for our DELETE case scenario is that a user
 requests that their data be deleted from the library database. Because
@@ -605,7 +608,8 @@ In this last part of the report, regarding SQL programming, we will show
 examples of the five types of programming structures that are required,
 and will explain, for each of them, how their behavior works.
 
-**1. Functions**
+---
+### **1. Functions**
 
 Given a book ID, the function returns how
 many are currently loaned out. The LoanedQuantity variable defaults to
@@ -622,7 +626,8 @@ This statement gives out in the following result:
 
 ![](.//media/image60.png)
 
-**2. Procedures**
+---
+### **2. Procedures**
 
 Given a Book ID and a User ID, create a
 new loan for the user, with the book. Set the LoanedDate to the actual
@@ -644,7 +649,8 @@ with BookID 1, has now been loaned by the user.
 ![](.//media/image64.png)
 ![](.//media/image65.png)
 
-**3. Transactions**
+---
+### **3. Transactions**
 
 Create fines for every overdue loan that has a status of 'LOANED'. After
 the fines are created, set the status for the loans to 'FINED' to
@@ -688,7 +694,8 @@ FINED, and a fine for UserID 4 is created:
 ![](.//media/image71.png)
 ![](.//media/image70.png)
 
-**4. Triggers**
+---
+### **4. Triggers**
 
 Here, we create a Trigger that, for each new insert in
 Loans, checks if there exist enough books for a new Loan, and also
@@ -715,7 +722,8 @@ the following error occurs:
 
 ![](.//media/image77.png)
 
-**5. Events**
+---
+### **5. Events**
 
 Here we create an Event that is scheduled
 to run every day, and utilizes the previously-created `CreateFines()`
