@@ -6,7 +6,7 @@
 
 #### [**1.** **Statement of Requirements**](#statement-of-requirements)
 
-### [**2.** **Conceptual Design**](#conceptual-design)
+[**2.** **Conceptual Design**](#conceptual-design)
 
 ### [**3.** **Logical Design**](#logical-design)
 
