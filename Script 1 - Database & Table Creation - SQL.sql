@@ -258,3 +258,4 @@ SELECT * FROM Writes;
 
 SELECT * FROM BookAuthorsView;
 SELECT * FROM TotalAmountDueView;
+ 
