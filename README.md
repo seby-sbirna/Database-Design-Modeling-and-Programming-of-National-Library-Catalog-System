@@ -459,8 +459,6 @@ report.
 
 ![](.//media/image10.png)
 
-![](.//media/image11.png)
-
 ---
 ## **6. Database Instance**
 
@@ -484,21 +482,64 @@ Here are some examples of how the data has been inserted using the INSERT statem
 
 The full list of data populating statements can be found in the attached
 scripts. Here, we will show the relation instance of all our Tables and
-Views, which now have gone through the creation and population steps:
+Views, which now have gone through the creation and population steps, 
+in the following order: a SQL SELECT QUERY image followed by its 
+corresponding Relation Instance:
 
-  SQL SELECT Query                                                                         Relation Instance
-  ---------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------
-  ![](.//media/image16.png){width="1.6625in" height="0.20972222222222223in"}A              ![](.//media/image17.png){width="3.560416666666667in" height="1.2472222222222222in"}s
-  ![](.//media/image18.png){width="1.323611111111111in" height="0.18194444444444444in"}    ![](.//media/image19.png){width="2.2152777777777777in" height="1.4541666666666666in"}
-  ![](.//media/image20.png){width="1.3423611111111111in" height="0.16944444444444445in"}   ![](.//media/image21.png){width="1.9770833333333333in" height="1.6111111111111112in"}
-  ![](.//media/image22.png){width="1.5in" height="0.19166666666666668in"}                  ![](.//media/image23.png){width="2.4680555555555554in" height="1.2958333333333334in"}x
-  ![](.//media/image24.png){width="1.2402777777777778in" height="0.19027777777777777in"}   ![](.//media/image25.png){width="6.1in" height="1.304861111111111in"}d
-  ![](.//media/image26.png){width="1.2868055555555555in" height="0.16875in"}               ![](.//media/image27.png){width="2.736111111111111in" height="0.7in"}
-  ![](.//media/image28.png){width="1.3145833333333334in" height="0.19444444444444445in"}   ![](.//media/image29.png){width="3.5833333333333335in" height="1.6590277777777778in"}
-  ![](.//media/image30.png){width="1.4159722222222222in" height="0.16666666666666666in"}   ![](.//media/image31.png){width="2.620138888888889in" height="0.49027777777777776in"}s
-  ![](.//media/image32.png){width="1.3701388888888888in" height="0.1638888888888889in"}    ![](.//media/image33.png){width="1.1444444444444444in" height="1.5923611111111111in"}
-  ![](.//media/image34.png){width="1.6625in" height="0.16875in"}                           ![](.//media/image35.png){width="4.444444444444445in" height="1.238888888888889in"}
-  ![](.//media/image36.png){width="1.8180555555555555in" height="0.17430555555555555in"}   ![](.//media/image37.png){width="1.4347222222222222in" height="0.3229166666666667in"}
+---
+
+![](.//media/image16.png)  
+![](.//media/image17.png)
+  
+---
+
+![](.//media/image18.png)
+![](.//media/image19.png)
+  
+---
+  
+![](.//media/image20.png)
+![](.//media/image21.png)
+  
+---
+  
+![](.//media/image22.png)
+![](.//media/image23.png)
+    
+---  
+
+![](.//media/image24.png)
+![](.//media/image25.png)
+
+---
+
+![](.//media/image26.png)
+![](.//media/image27.png)
+
+---
+
+![](.//media/image28.png)
+![](.//media/image29.png)
+
+---
+
+![](.//media/image30.png)
+![](.//media/image31.png)
+
+---
+
+![](.//media/image32.png)
+![](.//media/image33.png)
+
+---
+
+![](.//media/image34.png)
+![](.//media/image35.png)
+
+---
+
+![](.//media/image36.png)
+![](.//media/image37.png)
 
 ---
 ## **7. SQL Data Queries**
