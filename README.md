@@ -4,7 +4,7 @@
 
 ## **Table of Contents**
 
-[**1.** **Statement of Requirements**](#statement-of-requirements)
+### [**1.** **Statement of Requirements**](#statement-of-requirements)
 
 [**2.** **Conceptual Design**](#conceptual-design)
 
