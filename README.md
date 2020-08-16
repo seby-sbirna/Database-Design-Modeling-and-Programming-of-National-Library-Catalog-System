@@ -1,65 +1,27 @@
-**02170 Database Systems**
+# National Library Database - Design, Modeling and Programming
+### _By Sebastian Sbirna, Kåre Jørgensen, Şule Altıntaş & Fahad Sajad_
+---
 
-Anne Elisabeth Haxthausen
-
-Department of Applied Mathematics and Computer Science
-
-Project Group: Sergiu1
-
-Supervisor: Sergiu Ojog
-
-Group Members:
-
-Şule Altıntaş -- s154399
-
-Sebastian Sbirna -- s190553
-
-Fahad Ali Sajad -- s160344
-
-Kåre Joakim Jørgensen -- s144852
-
-Delivery Date: **4^th^ of April 2020**
-
-**Table of Contents** {#table-of-contents .TOC-Heading}
+**Table of Contents**
 =====================
 
-[**1.** **Statement of Requirements** 2](#statement-of-requirements)
+[**1.** **Statement of Requirements**](#statement-of-requirements)
 
-[**2.** **Conceptual Design** 2](#conceptual-design)
+[**2.** **Conceptual Design**](#conceptual-design)
 
-[**3.** **Logical Design** 6](#logical-design)
+[**3.** **Logical Design**](#logical-design)
 
-[**4.** **Normalization** 8](#normalization)
+[**4.** **Normalization**](#normalization)
 
-[**5.** **Implementation** 9](#implementation)
+[**5.** **Implementation**](#implementation)
 
-[**6.** **Database Instance** 11](#database-instance)
+[**6.** **Database Instance**](#database-instance)
 
-[**7.** **SQL Data Queries** 13](#sql-data-queries)
+[**7.** **SQL Data Queries**](#sql-data-queries)
 
-[**8.** **SQL Table Modifications** 14](#_Toc36730694)
+[**8.** **SQL Table Modifications**](#sql-table-modifications)
 
-[**9.** **SQL Programming** 17](#sql-programming)
-
-  **Chapter**   **Responsible person**   **Student number**
-  ------------- ------------------------ --------------------
-  1             Şule                     s154399
-  2             Sebastian                s190553
-  3             Kåre                     s144852
-  4             Fahad                    s160344
-  5             Sebastian                s190553
-  6             Sebastian                s190553
-  7             Fahad                    s160344
-  8             Şule                     s154399
-  9             Kåre                     s144852
-
-*The group project has been written in equal part by all student
-members,\
-and all members are co-responsible for the results, programming and
-writing of this project.*
-
-**\
-**
+[**9.** **SQL Programming**](#sql-programming)
 
 **Statement of Requirements**
 =============================
