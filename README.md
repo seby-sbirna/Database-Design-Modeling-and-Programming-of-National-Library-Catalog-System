@@ -3,7 +3,7 @@
 ---
 
 ## **Table of Contents**
-=====================
+---
 
 [**1.** **Statement of Requirements**](#statement-of-requirements)
 
@@ -23,10 +23,10 @@
 
 [**9.** **SQL Programming**](#sql-programming)
 
-**Statement of Requirements**
-=============================
+## **Statement of Requirements**
+---
 
-The purpose of this project is to design­­, model and program a database
+The purpose of this project is to design, model and program a database
 which resembles one of the many real-life scenarios for which a database
 would be needed.
 
@@ -77,8 +77,8 @@ library's inventory. The reservations will have a date and a status
 indicating whether the reservation is still in progress, is completed or
 has been cancelled.
 
-**Conceptual Design**
-=====================
+## **Conceptual Design**
+---
 
 After the statement of requirements has been set into place, we now
 understand what are the main concepts that our database will be working
