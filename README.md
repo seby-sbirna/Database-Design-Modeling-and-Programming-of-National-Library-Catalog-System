@@ -1,4 +1,4 @@
-# National Library Database - Design, Modeling and Programming
+## National Library Database - Design, Modeling and Programming
 ### _By Sebastian Sbirna, Kåre Jørgensen, Şule Altıntaş & Fahad Sajad_
 ---
 
