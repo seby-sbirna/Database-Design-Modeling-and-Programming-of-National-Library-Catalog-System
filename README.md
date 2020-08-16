@@ -268,7 +268,7 @@ E-R diagram into the following relation schemas:
 
 -   LibraryUser(<ins>UserID</ins>, FirstName, LastName, BirthDate, LoanNumber, UserStatus)
 
--   Author(<ins>AuthorID]<ins>, FirstName, LastName, Nationality)
+-   Author(<ins>AuthorID</ins>, FirstName, LastName, Nationality)
 
 -   Genre(<ins>GenreID</ins>, Type, Subtype)
 
