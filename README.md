@@ -6,23 +6,24 @@
 
 ### [**1.** **Statement of Requirements**](#statement-of-requirements)
 
-[**2.** **Conceptual Design**](#conceptual-design)
+### [**2.** **Conceptual Design**](#conceptual-design)
 
-[**3.** **Logical Design**](#logical-design)
+### [**3.** **Logical Design**](#logical-design)
 
-[**4.** **Normalization**](#normalization)
+### [**4.** **Normalization**](#normalization)
 
-[**5.** **Implementation**](#implementation)
+### [**5.** **Implementation**](#implementation)
 
-[**6.** **Database Instance**](#database-instance)
+### [**6.** **Database Instance**](#database-instance)
 
-[**7.** **SQL Data Queries**](#sql-data-queries)
+### [**7.** **SQL Data Queries**](#sql-data-queries)
 
-[**8.** **SQL Table Modifications**](#sql-table-modifications)
+### [**8.** **SQL Table Modifications**](#sql-table-modifications)
 
-[**9.** **SQL Programming**](#sql-programming)
+### [**9.** **SQL Programming**](#sql-programming)
 
 ---
+<a id='statement-of-requirements'></a>
 ## **1. Statement of Requirements**
 
 The purpose of this project is to design, model and program a database
