@@ -2,7 +2,7 @@
 ### _By Sebastian Sbirna, Kåre Jørgensen, Şule Altıntaş & Fahad Sajad_
 ---
 
-**Table of Contents**
+## **Table of Contents**
 =====================
 
 [**1.** **Statement of Requirements**](#statement-of-requirements)
