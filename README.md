@@ -2,25 +2,25 @@
 ### _By Sebastian Sbirna, Kåre Jørgensen, Şule Altıntaş & Fahad Sajad_
 ---
 
-## **Table of Contents**
+## **Table of Contents:**
 
-#### [**1.** **Statement of Requirements**](#statement-of-requirements)
+[**1.** **Statement of Requirements**](#statement-of-requirements)
 
 [**2.** **Conceptual Design**](#conceptual-design)
 
-### [**3.** **Logical Design**](#logical-design)
+[**3.** **Logical Design**](#logical-design)
 
-### [**4.** **Normalization**](#normalization)
+[**4.** **Normalization**](#normalization)
 
-### [**5.** **Implementation**](#implementation)
+[**5.** **Implementation**](#implementation)
 
-### [**6.** **Database Instance**](#database-instance)
+[**6.** **Database Instance**](#database-instance)
 
-### [**7.** **SQL Data Queries**](#sql-data-queries)
+[**7.** **SQL Data Queries**](#sql-data-queries)
 
-### [**8.** **SQL Table Modifications**](#sql-table-modifications)
+[**8.** **SQL Table Modifications**](#sql-table-modifications)
 
-### [**9.** **SQL Programming**](#sql-programming)
+[**9.** **SQL Programming**](#sql-programming)
 
 ---
 <a id='statement-of-requirements'></a>
@@ -78,6 +78,7 @@ indicating whether the reservation is still in progress, is completed or
 has been cancelled.
 
 ---
+<a id='conceptual-design'></a>
 ## **2. Conceptual Design**
 
 After the statement of requirements has been set into place, we now
@@ -251,6 +252,7 @@ Let us now explain the choices made in modeling our case-study database:
     attribute in the Book table.
 
 ---
+<a id='logical-design'></a>
 ## **3. Logical Design**
 
 Once the Entity-Relationship Diagram has been fully structured and
@@ -314,6 +316,7 @@ Foreign Key relations between tables can be seen from the arrows in the
 database schema diagram, shown in the figure above.
 
 ---
+<a id='normalization'></a>
 ## **4. Normalization**
 
 Lastly before we delve into the implementation of the database into SQL,
@@ -406,6 +409,7 @@ three attributes. Therefore, we can conclude that the Writes table is in
 the fourth normal form.
 
 ---
+<a id='implementation'></a>
 ## **5. Implementation**
 
 After the database has been logically and conceptually designed, and
@@ -461,6 +465,7 @@ report.
 ![](.//media/image10.png)
 
 ---
+<a id='database-instance'></a>
 ## **6. Database Instance**
 
 With this report chapter, we will take the empty tables and views from
@@ -543,6 +548,7 @@ corresponding Relation Instance:
 ![](.//media/image37.png)
 
 ---
+<a id='sql-data-queries'></a>
 ## **7. SQL Data Queries**
 
 The database is now modeled, created and populated, which means that it
@@ -590,6 +596,7 @@ Its output upon the initial database instance is:
 ![](.//media/image43.png)
 
 ---
+<a id='sql-table-modifications'></a>
 ## **8. SQL Table Modifications**
 
 For the table modifications part, we will show some examples of SQL
@@ -647,6 +654,7 @@ Before his data is deleted, he must pay all the outstanding fines.
 ![](.//media/image57.png)
 
 ---
+<a id='sql-programming'></a>
 ## **9. SQL Programming**
 
 In this last part of the report, regarding SQL programming, we will show
