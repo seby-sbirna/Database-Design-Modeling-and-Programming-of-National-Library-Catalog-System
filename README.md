@@ -266,36 +266,23 @@ Following the method described in the Database System Concepts, 6th
 Edition, as well as in our course supervisor's slides, we will map the
 E-R diagram into the following relation schemas:
 
--   LibraryUser([UserID]{.ul}, FirstName, LastName, BirthDate, Loan
-    Number, UserStatus)
+-   LibraryUser(<ins>UserID</ins>, FirstName, LastName, BirthDate, LoanNumber, UserStatus)
 
--   Author([AuthorID]{.ul}, FirstName, LastName, Nationality)
+-   Author(<ins>AuthorID]<ins>, FirstName, LastName, Nationality)
 
--   Genre([GenreID]{.ul}, Type, Subtype)
+-   Genre(<ins>GenreID</ins>, Type, Subtype)
 
--   Publisher([PublisherID]{.ul}, Name, HQCountry)
+-   Publisher(<ins>PublisherID</ins>, Name, HQCountry)
 
--   Book([BookID]{.ul}, PublisherID, GenreID, Title, ISBN, ReleaseYear,
-    PageCount, TotalQuantity, TextLanguage) **foreign key**
-    (PublisherId, GenreID) **references** (Publisher(PublisherID),
-    Genre(GenreID)) **on delete cascade**
+-   Book(<ins>BookID</ins>, PublisherID, GenreID, Title, ISBN, ReleaseYear, PageCount, TotalQuantity, TextLanguage) **foreign key** (PublisherId, GenreID) **references** (Publisher(PublisherID), Genre(GenreID)) **on delete cascade**
 
--   Fine([FineID]{.ul}, UserID, Amount, IssuedDate, PaymentStatus)
-    **foreign key** (UserID) **references** (LibraryUser(UserID)) **on
-    delete cascade**
+-   Fine(<ins>FineID</ins>, UserID, Amount, IssuedDate, PaymentStatus) **foreign key** (UserID) **references** (LibraryUser(UserID)) **on delete cascade**
 
--   Loans([UserID]{.ul}, [BookID]{.ul}, [LoanedDate]{.ul}, UntilDate,
-    ReturnedDate, LoanedStatus) **foreign key** (UserID, BookID)
-    **references** (LibraryUser(UserID), Book(BookID)) **on delete
-    cascade**
+-   Loans(<ins>UserID</ins>, <ins>BookID</ins>, <ins>LoanedDate</ins>, UntilDate, ReturnedDate, LoanedStatus) **foreign key** (UserID, BookID) **references** (LibraryUser(UserID), Book(BookID)) **on delete cascade**
 
--   Reserves([UserID]{.ul}, [BookID]{.ul}, [ReservedDate]{.ul},
-    ReservedStatus) **foreign key** (UserID, BookID) **references**
-    (LibraryUser(UserID), Book(BookID)) **on delete cascade**
+-   Reserves(<ins>UserID</ins>, <ins>BookID</ins>, <ins>ReservedDate</ins>, ReservedStatus) **foreign key** (UserID, BookID) **references** (LibraryUser(UserID), Book(BookID)) **on delete cascade**
 
--   Writes([AuthorID]{.ul}, [BookID]{.ul}) **foreign key** (AuthorID,
-    BookID) **references** (Author(AuthorID), Book(BookID)) **on delete
-    cascade**
+-   Writes(<ins>AuthorID</ins>, <ins>BookID</ins>) **foreign key** (AuthorID, BookID) **references** (Author(AuthorID), Book(BookID)) **on delete cascade**
 
 We have decided to make a separate Primary Key for each table coming from
 an Entity, in order to successfully identify every row without relying
