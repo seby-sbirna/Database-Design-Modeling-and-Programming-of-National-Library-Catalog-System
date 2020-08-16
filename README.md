@@ -435,6 +435,7 @@ report.
 
 ---
 ### 1. Examples of Entity table implementation:
+---
 
 ![](.//media/image4.png)
   
@@ -444,6 +445,7 @@ report.
   
 ---
 ### 2. Examples of Relationship table implementation:
+---
 
 ![](.//media/image5.png)
 
@@ -453,6 +455,7 @@ report.
 
 ---
 ### 3. Examples of View table implementation:
+---
 
 ![](.//media/image10.png)
 
