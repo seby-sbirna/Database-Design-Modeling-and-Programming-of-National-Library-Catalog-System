@@ -300,6 +300,10 @@ on the data in the row. For many-to-many relationship tables, the
 primary keys are composite primary keys, consisting of the Foreign Keys,
 as well as some date attributes, as in the case of Loans and Reserves.
 
+<p align="center">
+  <img src=".//media/image3.jpeg"/>
+</p>
+
 ![](.//media/image3.jpeg)
 
 On every foreign key, the DELETE cascades, since all our Foreign Keys
