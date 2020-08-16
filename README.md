@@ -433,6 +433,7 @@ seen in the two tables below. The full list of SQL statement used to
 create the database can be viewed in the SQL script attached to this
 report.
 
+---
 ### 1. Examples of Entity table implementation:
 
 ![](.//media/image4.png)
@@ -504,7 +505,8 @@ is ready to use in the daily life of a librarian. Below, we present
 three SQL data queries that show typical tasks one can do with this
 database, along with their outputs:
 
-**1. SQL Data Query 1**
+---
+### **1. SQL Data Query 1**
 
 The following query shows all books in the library and their respective
 authors:
@@ -515,7 +517,8 @@ Its output upon the initial database instance is:
 
 ![](.//media/image39.png)
 
-**2. SQL Data Query 2**
+---
+### **2. SQL Data Query 2**
 
 The next query shows the number of unique books the library has from each author. This
 does not refer to the total number of copies of each book, but strictly
@@ -662,7 +665,7 @@ database does not require any transactions with a manual rollback.
 
 Continuing with our previous example with
 the loaning of books by UserID 4, we can see from the Procedure
-subsection that the book "Kafka på stranden" was loaned on the 2^nd^ of
+subsection that the book "Kafka på stranden" was loaned on the 2nd of
 April, thus not requiring a fine at the moment of writing this report.
 In order to test the procedure with Transaction enabled, `CreateFines()`,
 we will change the loan date of the 'Kafka på stranden' book to go a few
@@ -723,6 +726,6 @@ for modularity.
 ![](.//media/image78.png)
 
 In order for the above event to be scheduled, we also need to run the
-command `**SET GLOBAL** event_scheduler = 1;` before running the
+command `SET GLOBAL event_scheduler = 1;` before running the
 previous event statement. By testing the `CreateFines()` procedure, the
 event has effectively been tested as well.
