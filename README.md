@@ -22,8 +22,8 @@
 
 [**9.** **SQL Programming**](#sql-programming)
 
-## **Statement of Requirements**
 ---
+## **Statement of Requirements**
 
 The purpose of this project is to design, model and program a database
 which resembles one of the many real-life scenarios for which a database
